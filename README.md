@@ -2,9 +2,10 @@
 
 Low-cost, low-power IoT smart lock proof of concept that combines fingerprint + passcode authentication, MQTT messaging, and a Flask admin console.
 
-<img src="images/IMG_2323.jpeg" alt="Device prototype" width="25%">
-<img src="images/IMG_2338.jpeg" alt="Device internals" width="25%">
-
+<p align="left">
+  <img src="images/IMG_2338.jpeg" width="30%" />
+  <img src="images/IMG_2323.jpeg" width="30%" />
+</p>
 
 ## Project goals
 - Deliver a cost-effective smart lock with strong security features.
