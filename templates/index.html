@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS file formatted for flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--internal CSS  -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #d4d4d4; /* Light grey for table headers */
+        }
+
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Page title -->
+<h1>Admin console</h1>
+
+<!--Error message -->
+<div id="passcode-error" class="error-message"></div>
+
+<!--container for table and buttons -->
+<div id="passcodes-container" style="position: relative;">
+
+    <!--refresh, delete, toggle edit-->
+    <div class="button-bar">
+        <button id="refresh-btn" class="refresh-button">Refresh</button>
+        <button id="delete-selected" class="delete-button">Delete Selected</button>
+        <button id="edit-mode-toggle" class="edit-button">Enable Edit Mode</button>
+    </div>
+
+    <!--passcodes data table-->
+    <table id="passcodes-table">
+        <thead>
+        <tr>
+            <!--checkbox column-->
+            <th class="edit-checkbox-col" style="display: none;"></th>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Passcode hash</th>
+            <th>Last access</th>
+            <th>Date created</th>
+        </tr>
+        </thead>
+
+
+        <tbody id="passcodes-list">
+        </tbody>
+    </table>
+</div>
+
+<!--JS script formatted for flask directory-->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
